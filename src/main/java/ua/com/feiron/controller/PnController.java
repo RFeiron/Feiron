@@ -29,6 +29,7 @@ public class PnController {
     public String getPr(){
         return "index";
     }
+
     @RequestMapping(value = "product", method = RequestMethod.GET)
     public String getProduct(Model model){
         List<Pn> lists = this.pnRepository.listAll();

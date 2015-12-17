@@ -4,4 +4,5 @@
 
     <a href="calc">Калькулятор</a>
     <a href="product">Продукция</a>
+    <a href="contact">Контакты</a>
 </t:template>
