@@ -14,7 +14,7 @@
        <context:property-placeholder location="classpath:jdbc.properties" system-properties-mode="ENVIRONMENT"/>
        <context:component-scan base-package="ua.com.feiron.repository, ua.com.feiron.validation"/>
        <tx:annotation-driven transaction-manager="transactionManager"/>
-       <!--<import resource="security-context.xml"></import>-->
+       <import resource="srcurity-context.xml"/>
 
 
 

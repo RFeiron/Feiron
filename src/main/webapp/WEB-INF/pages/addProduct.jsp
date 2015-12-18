@@ -21,7 +21,7 @@
                 </td>
                 <td><form:input path="work_b"/></td>
                 <td>
-                <from:errors cssClass="error" path="work_b"/>
+                        <from:errors cssClass="error" path="work_b"/>
                 <td>
             </tr>
 
@@ -34,6 +34,7 @@
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="add"/></td>
+
             </tr>
         </table>
     </form:form>

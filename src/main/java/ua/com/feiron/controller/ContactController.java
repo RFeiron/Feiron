@@ -1,6 +1,7 @@
 package ua.com.feiron.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -34,13 +35,14 @@ public class ContactController {
     }
 
     @RequestMapping(value = "addContact", method = RequestMethod.GET)
-//    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("isAuthenticated()")
     public String addContact(Model model){
         model.addAttribute("contact", new Contact());
         return "addContact";
     }
 
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
+    @PreAuthorize("isAuthenticated()")
     public String addProduct(@ModelAttribute("contact") Contact contact, BindingResult bindingResult){
         this.contactValidator.validate(contact, bindingResult);
         if (bindingResult.hasErrors()){

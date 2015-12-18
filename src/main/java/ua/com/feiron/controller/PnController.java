@@ -2,6 +2,7 @@ package ua.com.feiron.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -39,13 +40,14 @@ public class PnController {
         return "product";
     }
     @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
-//    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("isAuthenticated()")
     public String addProduct(Model model){
         model.addAttribute("pn", new Pn());
         return "addProduct";
     }
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
+    @PreAuthorize("isAuthenticated()")
     public String addProduct(@ModelAttribute("pn") Pn pn, BindingResult bindingResult){
         this.pnValidator.validate(pn, bindingResult);
         if (bindingResult.hasErrors()){
@@ -57,6 +59,7 @@ public class PnController {
     }
 
     @RequestMapping(value = "deleteProduct/{id}", method = RequestMethod.GET)
+    @PreAuthorize("hasRole('admin')")
     public String deleteProduct(@PathVariable Integer id){
 
         this.pnRepository.removeProduct(id);
