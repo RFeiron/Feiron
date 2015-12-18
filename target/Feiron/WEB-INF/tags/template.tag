@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class = "content">
-    <h1>Feiron</h1>
+    <h1><a href="/"><img src="/resources/img/logo-1.jpg" width="200" height="100"></a></h1>
     <jsp:doBody/>
 </div>
 

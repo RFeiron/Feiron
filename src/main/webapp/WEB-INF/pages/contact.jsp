@@ -21,8 +21,7 @@
           <td>${contact.email}</td>
           <td>${contact.fio}</td>
           <td>${contact.note}</td>
-
-          <td><a href="deleteContact/${contact.id}">Delete</a></td>
+          <td><a href="javascript:ContactUtils.deleteContact(${contact.id})">Delete</a></td>
 
         </tr>
       </c:forEach>

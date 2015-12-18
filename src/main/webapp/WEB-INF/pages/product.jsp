@@ -19,9 +19,7 @@
                     <td>${pn.name}</td>
                     <td>${pn.work_b}</td>
                     <td>${pn.base_b}</td>
-
-                    <td><a href="deleteProduct/${pn.id}">Delete</a></td>
-
+                    <td><a href="javascript:PnUtils.deletePn(${pn.id})">Delete</a></td>
                 </tr>
             </c:forEach>
         </table>

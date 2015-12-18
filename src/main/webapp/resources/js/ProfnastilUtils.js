@@ -1,10 +1,20 @@
-function _ProfnastilUtils(){
+function _PnUtils(){
 
-    this.deleteProfnastil = function(id){
+    this.deletePn = function(id){
         if(confirm("Are you sure?")){
-            window.location = "/deleteProfnastil/" + id;
+            window.location = "/deleteProduct/" + id;
         }
     }
 }
 
-var ProfnastilUtils = new _ProfnastilUtils();
+function _ContactUtils(){
+
+    this.deleteContact = function(id){
+        if(confirm("Are you sure?")){
+            window.location = "/deleteContact/" + id;
+        }
+    }
+}
+
+var PnUtils = new _PnUtils();
+var ContactUtils = new _ContactUtils();
