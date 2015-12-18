@@ -10,16 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.com.feiron.domain.Contact;
 import ua.com.feiron.repository.ContactRepository;
+import ua.com.feiron.validation.ContactValidator;
 
 import java.util.List;
 
 @Controller
 public class ContactController {
     private ContactRepository contactRepository;
+    private ContactValidator contactValidator;
 
     @Autowired
-    public ContactController(ContactRepository contactRepository){
+    public ContactController(ContactRepository contactRepository, ContactValidator contactValidator){
         this.contactRepository = contactRepository;
+        this.contactValidator = contactValidator;
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
@@ -39,10 +42,10 @@ public class ContactController {
 
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
     public String addProduct(@ModelAttribute("contact") Contact contact, BindingResult bindingResult){
-//        this.pnValidator.validate(pn, bindingResult);
-//        if (bindingResult.hasErrors()){
-//            return "addProduct";
-//        }
+        this.contactValidator.validate(contact, bindingResult);
+        if (bindingResult.hasErrors()){
+            return "addContact";
+        }
 
         this.contactRepository.addContact(contact);
         return "redirect:/contact";

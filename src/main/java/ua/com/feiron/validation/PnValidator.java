@@ -16,7 +16,7 @@ public class PnValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required.name", "Name is required");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "work_b", "required.work_B", "Rabochaya Shirina is required");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "bas_b", "required.bas_B", "Obshaya Shirina is required");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "work_b", "required.work_b", "Rabochaya Shirina is required");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "base_b", "required.base_b", "Obshaya Shirina is required");
     }
 }

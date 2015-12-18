@@ -12,6 +12,7 @@
                     <form:label path="name"> Name </form:label>
                 </td>
                 <td><form:input path="name"/></td>
+                <td><from:errors cssClass="error" path="name"/></td>
             </tr>
 
             <tr>
@@ -19,7 +20,9 @@
                     <form:label path="work_b"> Rabochaya Shirina </form:label>
                 </td>
                 <td><form:input path="work_b"/></td>
-                    <%--<td><from:errors cssClass="error" path="work_B"></from:errors></td>--%>
+                <td>
+                <from:errors cssClass="error" path="work_b"/>
+                <td>
             </tr>
 
             <tr>
@@ -27,7 +30,7 @@
                     <form:label path="base_b"> Obshaya Shirina</form:label>
                 </td>
                 <td><form:input path="base_b"/></td>
-                    <%--<td><from:errors cssClass="error" path="bas_B"></from:errors></td>--%>
+                <td><from:errors cssClass="error" path="base_b"/></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="add"/></td>

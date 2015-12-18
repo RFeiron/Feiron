@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ua.com.feiron.domain.Pn;
 import ua.com.feiron.repository.PnRepository;
+import ua.com.feiron.validation.PnValidator;
 
 import java.util.List;
 
@@ -16,11 +17,12 @@ import java.util.List;
 public class PnController {
 
     private PnRepository pnRepository;
-//    private PnValidator pnValidator;
+    private PnValidator pnValidator;
 
     @Autowired
-    public PnController(PnRepository pnRepository){
+    public PnController(PnRepository pnRepository, PnValidator pnValidator){
         this.pnRepository = pnRepository;
+        this.pnValidator = pnValidator;
 
     }
 
@@ -45,10 +47,10 @@ public class PnController {
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
     public String addProduct(@ModelAttribute("pn") Pn pn, BindingResult bindingResult){
-//        this.pnValidator.validate(pn, bindingResult);
-//        if (bindingResult.hasErrors()){
-//            return "addProduct";
-//        }
+        this.pnValidator.validate(pn, bindingResult);
+        if (bindingResult.hasErrors()){
+            return "addProduct";
+        }
 
         this.pnRepository.addProduct(pn);
         return "redirect:/product";
