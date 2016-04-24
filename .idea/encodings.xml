@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/feiron/controller/ContactController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/feiron/controller/PnController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/feiron/domain/Contact.java" charset="UTF-8" />
@@ -8,7 +8,15 @@
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/feiron/repository/ContactRepository.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/feiron/repository/PnRepository.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addContact.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/calc.jsp" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/product.jsp" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/trapezium.jsp" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/trapezium.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/triangle.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/triangle.jsp" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/resources/img" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/resources/js/ProfnastilUtils.js" charset="windows-1251" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
